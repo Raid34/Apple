@@ -7,83 +7,148 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
         }
+
         header {
+            background: url('your-image-url') no-repeat center center fixed;
+            background-size: cover;
+            padding: 60px;
             text-align: center;
-            padding: 20px;
-            background: #000;
             color: white;
         }
-        header h1 {
-            font-size: 2.5em;
+
+        h1 {
+            font-size: 48px;
             font-weight: bold;
             font-style: italic;
+            text-decoration: underline;
+            padding-bottom: 20px;
         }
-        section {
+
+        .intro {
+            font-size: 20px;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            margin: 10px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 80%;
+            margin: 0 auto;
         }
-        .goals {
-            list-style-type: decimal;
-            margin-left: 40px;
+
+        .content {
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
         }
-        .goals li {
-            margin-bottom: 10px;
+
+        ol {
+            margin: 20px 0;
+            padding-left: 40px;
         }
+
+        li {
+            margin: 10px 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .goal {
+            font-weight: bold;
+            font-size: 22px;
+        }
+
+        .subheading {
+            font-weight: normal;
+            font-style: italic;
+        }
+
         footer {
             text-align: center;
+            font-size: 16px;
+            margin-top: 30px;
             padding: 20px;
-            background: #000;
+            background-color: #333;
             color: white;
-            margin-top: 20px;
         }
-        .stretched-image {
+
+        .bottom-image {
             width: 100%;
             height: auto;
-            border-top: 5px solid #000;
-            border-bottom: 5px solid #000;
+            margin-top: 20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-bar {
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .intro, .content {
+                width: 90%;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Donald Trump's Goals After Inauguration</h1>
+    </header>
 
-<header>
-    <h1>Donald Trump's Goals After Inauguration</h1>
-</header>
+    <div class="intro">
+        <p>Explore the key goals that President Donald Trump aims to achieve after his inauguration, along with potential challenges that might arise.</p>
+    </div>
 
-<section>
-    <p><strong>Donald Trump's inauguration came with a set of bold promises and expectations. His leadership would have a far-reaching impact, influencing policies and priorities. Below, we outline some of his core goals post-inauguration.</strong></p>
-    
-    <ul class="goals">
-        <li><strong>Goal 1: Strengthening National Security</strong>
-            <ul>
-                <li><em>Why This Might Be Bad for Us:</em> The balance between national security and personal freedoms can be delicate, and overreach in the name of security may lead to loss of privacy or civil liberties.</li>
-            </ul>
-        </li>
-        <li><strong>Goal 2: Revitalizing the Economy</strong>
-            <ul>
-                <li><em>Why This Is Important:</em> Economic stability is crucial for citizens' well-being, and policies aimed at boosting the economy can impact everything from jobs to taxes.</li>
-            </ul>
-        </li>
-        <li><strong>Goal 3: Reforming Healthcare</strong>
-            <ul>
-                <li><em>Why This Might Be Bad for Us:</em> Healthcare reform could lead to challenges in access to medical care for those relying on government programs.</li>
-            </ul>
-        </li>
-    </ul>
-</section>
+    <div class="content">
+        <ol>
+            <li>
+                <p class="goal">Cut Taxes</p>
+                <p class="subheading">Why This Could Backfire:</p>
+                <p>Tax cuts may not benefit all Americans equally and could lead to an escalation of national debt.</p>
+            </li>
 
-<footer>
-    <p>That's all from the news. Come back next week!</p>
-</footer>
+            <li>
+                <p class="goal">Increase Military Spending</p>
+                <p class="subheading">Why This Might Lead to Global Tension:</p>
+                <p>Increased military spending could be seen as a provocation by other nations and may result in an arms race.</p>
+            </li>
 
-<img src="https://c.ndtvimg.com/2024-12/o37c91h8_donald-trump-reuters_625x300_10_December_24.jpeg?im=FeatureCrop,algorithm=dnn,width=545,height=307" alt="Donald Trump" class="stretched-image">
+            <li>
+                <p class="goal">Immigration Reform</p>
+                <p class="subheading">Why This Could Divide the Country:</p>
+                <p>Proposed reforms may alienate certain voter groups and lead to social divisions.</p>
+            </li>
+
+            <li>
+                <p class="goal">Repeal Obamacare</p>
+                <p class="subheading">Why This Might Be Risky:</p>
+                <p>Repealing Obamacare could lead to millions losing their health coverage and create an unstable healthcare environment.</p>
+            </li>
+        </ol>
+    </div>
+
+    <footer>
+        <p>That’s all from the news. Come back next week!</p>
+    </footer>
+
+    <img class="bottom-image" src="your-image-url" alt="Trump's image at the bottom">
+
+    <input class="search-bar" type="text" placeholder="Search Trump’s Policies...">
 
 </body>
 </html>
+

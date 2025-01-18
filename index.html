@@ -1,63 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apples and Rants</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donald Trump Background</title>
+  <style>
+    /* Reset some default styles for a clean look */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+    /* The container for the blurred background */
+    .background {
+      position: relative;
+      height: 100vh; /* Full viewport height */
+      background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSdsrvUs2jyc0BwI1KFoQIaSa9jjmBCSQGLjCdZUM2_skS-lUnNC7XIdyPA_BiAZyYzLjimxYeJyw-m9mo'); /* Donald Trump's image */
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px); /* Controls the blur effect */
+    }
 
-        p {
-            text-align: center;
-            color: #666;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-
-        /* Updated section for rant */
-        .rant {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 1.2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .rant p {
-            font-style: italic;
-            color: #333;
-        }
-    </style>
+    /* The text content overlay */
+    .content {
+      position: absolute; /* Position it over the background */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white; /* Text color */
+      text-align: center;
+      font-size: 2rem; /* Adjust the size of the text */
+      background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay for readability */
+    }
+  </style>
 </head>
 <body>
+  <!-- Blurred background -->
+  <div class="background"></div>
 
-    <h1>Welcome to My Apples Website!</h1>
-    <p>This site is all about apples 🍎 and some spicy rants</p>
-
-    <!-- Rant Section -->
-    <div class="rant">
-        <p>Donald Trump is on his way to be the first president to serve two terms. As Americans, let everyone see that the man they said will never be president, be president for the second time running. Good day.</p>
-    </div>
-
-    <footer>
-        <p>Made with love by [Terminator]</p>
-    </footer>
-
+  <!-- Content with text -->
+  <div class="content">
+    <p>Donald Trump's inauguration was an eventful moment in history.</p>
+  </div>
 </body>
 </html>

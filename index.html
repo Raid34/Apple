@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     /* The blurred background image */
@@ -35,19 +35,24 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
     }
 
-    /* Main content styling (text over background) */
+    /* Content section with white background */
     .content {
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
+      background-color: white;
+      margin-top: 150px; /* Adds space from the blurred image */
       padding: 20px;
-      text-align: center;
-      max-width: 800px;
-      width: 90%;
+      color: black;
       font-size: 1.2rem;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Make text more readable on the blurred background */
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    }
+
+    /* Introductory text styling */
+    .intro {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
     }
 
     /* List styling */
@@ -62,10 +67,19 @@
     /* Footer styling */
     footer {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 40px;
       font-size: 1rem;
-      color: white;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Small shadow for footer text */
+    }
+
+    /* Image of Trump on the side */
+    .image-side {
+      position: absolute;
+      top: 30%;
+      right: 10%;
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     /* Mobile Responsiveness */
@@ -77,11 +91,19 @@
       .content {
         width: 90%;
         font-size: 1rem;
+        padding: 15px;
+      }
+
+      .image-side {
+        width: 150px;
+        top: 20%;
+        right: 5%;
       }
     }
   </style>
 </head>
 <body>
+
   <!-- Background Image -->
   <div class="background"></div>
 
@@ -90,7 +112,7 @@
 
   <!-- Content Section -->
   <div class="content">
-    <p>Here's 5 things Donald Trump will do as President:</p>
+    <p class="intro">From ending inflation to ending Teslas with his "drill, drill, drill" vows and then ending the war in Ukraine, here’s 5 things Donald Trump will do as President:</p>
     <ol>
       <li>End inflation with tax cuts and 10% tariffs on imported goods.</li>
       <li>Reject climate regulations and increase fossil fuels.</li>
@@ -100,8 +122,13 @@
     </ol>
   </div>
 
+  <!-- Image of Trump on the side -->
+  <img class="image-side" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRWAN9OfwS2J6DP-Wk8F7AmfnD645FTcNganc3x_HUlApDbuKl4Q6jqxWl4UyA1JXKe-qqA73NzPEz0LRu8-tw_0Q" alt="Donald Trump">
+
   <!-- Footer Section -->
   <footer>That's all from the news. Come back next week!</footer>
+
 </body>
 </html>
+
 

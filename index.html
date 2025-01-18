@@ -12,34 +12,18 @@
       overflow-x: hidden;
     }
 
-    /* The blurred background image */
-    .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSdsrvUs2jyc0BwI1KFoQIaSa9jjmBCSQGLjCdZUM2_skS-lUnNC7XIdyPA_BiAZyYzLjimxYeJyw-m9mo');
-      background-size: cover;
-      background-position: center;
-      filter: blur(8px); /* The blur effect */
-      z-index: -1; /* Keep the background behind content */
-    }
-
-    /* Title styling */
-    h1 {
-      color: white;
-      text-align: center;
-      font-size: 3rem;
-      padding-top: 50px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+    /* Main Trump Image (Unblurred) */
+    .main-image {
+      width: 100%;
+      height: 350px; /* Set height for the image */
+      object-fit: cover; /* Ensure the image stretches across */
+      filter: none; /* No blur here */
     }
 
     /* Content section with white background */
     .content {
       background-color: white;
-      margin-top: 150px; /* Adds space from the blurred image */
-      padding: 20px;
+      padding: 40px 20px;
       color: black;
       font-size: 1.2rem;
       max-width: 900px;
@@ -53,6 +37,8 @@
     .intro {
       font-size: 1.5rem;
       margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
     }
 
     /* List styling */
@@ -69,46 +55,29 @@
       text-align: center;
       margin-top: 40px;
       font-size: 1rem;
-    }
-
-    /* Image of Trump on the side */
-    .image-side {
-      position: absolute;
-      top: 30%;
-      right: 10%;
-      width: 200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-weight: normal;
     }
 
     /* Mobile Responsiveness */
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
+      .main-image {
+        height: 250px;
       }
 
       .content {
-        width: 90%;
-        font-size: 1rem;
-        padding: 15px;
+        padding: 20px;
       }
 
-      .image-side {
-        width: 150px;
-        top: 20%;
-        right: 5%;
+      .intro {
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Background Image -->
-  <div class="background"></div>
-
-  <!-- Title Section -->
-  <h1>Donald Trump's Goals After Inauguration</h1>
+  <!-- Main Image -->
+  <img class="main-image" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRWAN9OfwS2J6DP-Wk8F7AmfnD645FTcNganc3x_HUlApDbuKl4Q6jqxWl4UyA1JXKe-qqA73NzPEz0LRu8-tw_0Q" alt="Donald Trump">
 
   <!-- Content Section -->
   <div class="content">
@@ -122,13 +91,8 @@
     </ol>
   </div>
 
-  <!-- Image of Trump on the side -->
-  <img class="image-side" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRWAN9OfwS2J6DP-Wk8F7AmfnD645FTcNganc3x_HUlApDbuKl4Q6jqxWl4UyA1JXKe-qqA73NzPEz0LRu8-tw_0Q" alt="Donald Trump">
-
   <!-- Footer Section -->
   <footer>That's all from the news. Come back next week!</footer>
 
 </body>
 </html>
-
-

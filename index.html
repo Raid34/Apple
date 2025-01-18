@@ -9,32 +9,36 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      overflow: hidden; /* Prevent scrollbars */
     }
 
     /* The container for the blurred background */
     .background {
-      position: relative;
-      height: 100vh; /* Full viewport height */
-      background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSdsrvUs2jyc0BwI1KFoQIaSa9jjmBCSQGLjCdZUM2_skS-lUnNC7XIdyPA_BiAZyYzLjimxYeJyw-m9mo'); /* Donald Trump's image */
-      background-size: cover;
-      background-position: center;
-      filter: blur(5px); /* Controls the blur effect */
-    }
-
-    /* The text content overlay */
-    .content {
-      position: absolute; /* Position it over the background */
+      position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white; /* Text color */
+      background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSdsrvUs2jyc0BwI1KFoQIaSa9jjmBCSQGLjCdZUM2_skS-lUnNC7XIdyPA_BiAZyYzLjimxYeJyw-m9mo');
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px); /* Controls the blur effect */
+      z-index: -1; /* Put the background behind the text */
+    }
+
+    /* The text content overlay */
+    .content {
+      position: absolute;
+      top: 50%; /* Vertically center the text */
+      left: 50%; /* Horizontally center the text */
+      transform: translate(-50%, -50%); /* Perfectly center the text */
+      color: white;
       text-align: center;
-      font-size: 2rem; /* Adjust the size of the text */
-      background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent overlay for readability */
+      font-size: 2rem; /* Adjust text size */
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+      padding: 20px;
+      border-radius: 10px; /* Optional: adds rounded corners to the text box */
+      max-width: 90%; /* Prevent the text box from being too wide */
     }
   </style>
 </head>
@@ -48,3 +52,4 @@
   </div>
 </body>
 </html>
+

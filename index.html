@@ -12,49 +12,54 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
             background-image: url('https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT0nCVAkm3ui5aY_h5clCn_vHx2iFlUfsjDuTnjWBtZc_bqHFcPNlGXnEkxUIf7-pTOQleO1UFG5zofBPeQ-3oLbmG3TJ5neyGnYNbw1dvwCVmNz9I0qcRXT1aCpnwEZudHLhuU0TWeXw');
             background-size: cover;
             background-position: center;
             height: 300px;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         h1 {
             font-size: 2.5em;
             font-weight: bold;
-            text-decoration: underline faint;
+            text-decoration: underline;
             margin: 20px auto;
             text-align: center;
             padding: 10px;
             position: relative;
-            display: inline-block;
             background-color: #e7f3ff;
             border-radius: 10px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
         }
         h1::before, h1::after {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: gold;
-            border: 3px solid black;
-            border-radius: 50%;
+            height: 2px;
+            background-color: black;
         }
         h1::before {
-            top: -10px;
-            left: -10px;
+            top: -15px;
+            left: -20px;
+            width: 30px;
         }
         h1::after {
-            bottom: -10px;
+            bottom: -15px;
             right: -10px;
+            width: 50px;
         }
         main {
             padding: 20px;
+            max-width: 800px;
+            text-align: justify;
         }
         .intro {
             font-style: italic;
@@ -85,8 +90,7 @@
     </style>
 </head>
 <body>
-    <header>
-    </header>
+    <header></header>
     <h1>Donald Trump's Plans for America</h1>
     <main>
         <div class="intro">

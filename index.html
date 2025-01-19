@@ -61,11 +61,9 @@
             padding: 20px;
             max-width: 700px;
             text-align: justify;
-            position: relative;
-            margin-top: 50px;
         }
         .intro {
-            font-style: normal;
+            font-style: italic;
             font-size: 1.1em;
             font-weight: bold;
             background: white;
@@ -76,23 +74,9 @@
         ol {
             margin: 20px 0;
             padding-left: 20px;
-            list-style-type: none;
-            counter-reset: item;
-            margin-top: 30px;
         }
         ol li {
             margin-bottom: 25px;
-            position: relative;
-        }
-        ol li::before {
-            content: counter(item) ".";
-            font-family: Cambria, serif;
-            font-weight: bold;
-            position: absolute;
-            left: -40px;
-        }
-        ol li {
-            counter-increment: item;
         }
         .summary {
             font-size: 1em;
@@ -118,19 +102,28 @@
             border-top: 5px solid #333;
             box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.5);
         }
-        .line-left {
-            border-left: 4px solid #333;
-            position: absolute;
-            left: -15px;
-            top: 0;
-            bottom: 0;
-            height: 100%;
+        .numbered-list {
+            list-style-type: decimal;
         }
-        ol li:first-child {
-            margin-top: 40px;
+        .numbered-list li {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            position: relative;
         }
-        .number-1 {
-            margin-left: 50px; /* Adjusting to bring number 1 closer to the subtitle */
+        .numbered-list li strong {
+            font-family: Cambria, serif;
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        .numbered-list li p {
+            font-family: Arial, sans-serif;
+            font-size: 1em;
+            margin-left: 10px;
+        }
+        /* Fix indentation of first point */
+        .first-point {
+            margin-left: 0;
         }
     </style>
 </head>
@@ -145,9 +138,8 @@
         <div class="summary">
             <p>Donald Trump has announced ambitious plans for his next term. These include revitalizing the economy, prioritizing energy independence, and addressing border security with more stringent policies. His focus on deregulation aims to accelerate industrial growth, while new fiscal strategies target inflation and aim to stabilize the middle class's financial footing. Trump also plans to explore digital innovation through cryptocurrency initiatives, emphasizing technological leadership. Moreover, his administration has signaled a commitment to renegotiate trade agreements to favor American industries and workers. These updates signal a bold approach to governance, aiming to redefine domestic and international policies for a stronger America.</p>
         </div>
-        <div class="line-left"></div>
-        <ol>
-            <li class="number-1">
+        <ol class="numbered-list">
+            <li class="first-point">
                 <strong>Ending Inflation:</strong>
                 <p>Donald Trump plans to address inflation by implementing stricter fiscal policies, reducing government spending, and focusing on deregulating industries to boost economic growth. He aims to stabilize prices and improve purchasing power for Americans. Additionally, his approach involves working closely with the Federal Reserve to manage interest rates effectively. By cutting unnecessary bureaucracy, Trump seeks to enhance productivity in key sectors of the economy. This initiative is expected to bring relief to middle-class families struggling with rising costs.</p>
             </li>
@@ -168,11 +160,10 @@
                 <p>He has pledged to reinstate stricter immigration policies, prioritizing the deportation of undocumented migrants and increasing border security measures. Trump plans to allocate additional resources to immigration enforcement agencies. His administration argues that these measures will protect American jobs and ensure national security. Advocates highlight the need to address illegal immigration systematically, while opponents have raised concerns about the humanitarian implications. Balancing security with compassion remains a contentious aspect of this policy.</p>
             </li>
         </ol>
-        <footer>
-            <p>That's the news. New Headlines next week.</p>
-        </footer>
     </main>
-    <img src="https://cdn.britannica.com/45/193845-050-A7905463/Donald-Trump-front-Tower-New-York-City-August-2008.jpg" alt="Trump Fist Raised" class="bottom-image">
+    <footer>
+        <p>That's the news. New Headlines next week.</p>
+        <img src="https://cdn.britannica.com/45/193845-050-A7905463/Donald-Trump-front-Tower-New-York-City-August-2008.jpg" alt="Donald Trump Tower" class="bottom-image">
+    </footer>
 </body>
 </html>
-

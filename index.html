@@ -7,7 +7,7 @@
     <title>Donald Trump's Plans for America</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -40,6 +40,7 @@
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
+            border-bottom: 2px solid black; /* Added line under heading */
         }
         h1::before, h1::after {
             content: '';
@@ -57,11 +58,6 @@
             right: -10px;
             width: 50px;
         }
-        main {
-            padding: 20px;
-            max-width: 700px;
-            text-align: justify;
-        }
         .intro {
             font-style: italic;
             font-size: 1.1em;
@@ -70,6 +66,14 @@
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 20px;
+            border-bottom: 2px solid black; /* Added line under intro */
+        }
+        main {
+            padding: 20px;
+            max-width: 700px;
+            text-align: justify;
+            border-left: 2px solid black; /* Line on the left */
+            border-right: 2px solid black; /* Line on the right */
         }
         ol {
             margin: 20px 0;
@@ -77,6 +81,13 @@
         }
         ol li {
             margin-bottom: 25px;
+        }
+        ol li:first-child {
+            margin-top: 0; /* Fix for first item alignment */
+        }
+        ol li strong {
+            font-family: Cambria, serif; /* Cambria for point titles */
+            font-size: 1.2em; /* Adjusted size for better fit */
         }
         .summary {
             font-size: 1em;

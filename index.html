@@ -77,6 +77,7 @@
             padding-left: 20px;
             list-style-type: decimal;
             counter-reset: item;
+            margin-top: 30px; /* Push the list down */
         }
         ol li {
             margin-bottom: 25px;
@@ -85,6 +86,7 @@
         }
         ol li::before {
             content: counter(item) ".";
+            font-family: Cambria, serif;
             font-weight: bold;
             position: absolute;
             left: -40px;
@@ -134,6 +136,7 @@
         <div class="summary">
             <p>Donald Trump has announced ambitious plans for his next term. These include revitalizing the economy, prioritizing energy independence, and addressing border security with more stringent policies. His focus on deregulation aims to accelerate industrial growth, while new fiscal strategies target inflation and aim to stabilize the middle class's financial footing. Trump also plans to explore digital innovation through cryptocurrency initiatives, emphasizing technological leadership. Moreover, his administration has signaled a commitment to renegotiate trade agreements to favor American industries and workers. These updates signal a bold approach to governance, aiming to redefine domestic and international policies for a stronger America.</p>
         </div>
+        <div class="line-left"></div> <!-- This adds the line on the left -->
         <ol>
             <li>
                 <strong>Ending Inflation:</strong>

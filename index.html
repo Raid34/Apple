@@ -61,11 +61,8 @@
             padding: 20px;
             max-width: 700px;
             text-align: justify;
-            position: relative;
-            margin-top: 50px; /* Ensure space between header and content */
         }
         .intro {
-            font-style: normal;
             font-size: 1.1em;
             font-weight: bold;
             background: white;
@@ -76,21 +73,15 @@
         ol {
             margin: 20px 0;
             padding-left: 20px;
-            list-style-type: decimal;
-            counter-reset: item;
-            margin-top: 30px; /* Push the list down */
+            border-left: 3px solid black;
+            padding-bottom: 10px;
         }
         ol li {
             margin-bottom: 25px;
-            counter-increment: item;
-            position: relative;
         }
-        ol li::before {
-            content: counter(item) ".";
+        ol li strong {
             font-family: Cambria, serif;
-            font-weight: bold;
-            position: absolute;
-            left: -40px;
+            font-size: 1.4em;
         }
         .summary {
             font-size: 1em;
@@ -116,18 +107,6 @@
             border-top: 5px solid #333;
             box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.5);
         }
-        .line-left {
-            border-left: 4px solid #333;
-            position: absolute;
-            left: -15px;
-            top: 0;
-            bottom: 0;
-            height: 100%;
-        }
-        /* Adjust list item and first point positioning */
-        ol li:first-child {
-            margin-top: 40px; /* Add space between the image and the first list item */
-        }
     </style>
 </head>
 <body>
@@ -141,7 +120,6 @@
         <div class="summary">
             <p>Donald Trump has announced ambitious plans for his next term. These include revitalizing the economy, prioritizing energy independence, and addressing border security with more stringent policies. His focus on deregulation aims to accelerate industrial growth, while new fiscal strategies target inflation and aim to stabilize the middle class's financial footing. Trump also plans to explore digital innovation through cryptocurrency initiatives, emphasizing technological leadership. Moreover, his administration has signaled a commitment to renegotiate trade agreements to favor American industries and workers. These updates signal a bold approach to governance, aiming to redefine domestic and international policies for a stronger America.</p>
         </div>
-        <div class="line-left"></div> <!-- This adds the line on the left -->
         <ol>
             <li>
                 <strong>Ending Inflation:</strong>
@@ -164,10 +142,10 @@
                 <p>He has pledged to reinstate stricter immigration policies, prioritizing the deportation of undocumented migrants and increasing border security measures. Trump plans to allocate additional resources to immigration enforcement agencies. His administration argues that these measures will protect American jobs and ensure national security. Advocates highlight the need to address illegal immigration systematically, while opponents have raised concerns about the humanitarian implications. Balancing security with compassion remains a contentious aspect of this policy.</p>
             </li>
         </ol>
-        <footer>
-            <p>That's the news. New Headlines next week.</p>
-        </footer>
     </main>
-    <img src="https://cdn.britannica.com/45/193845-050-A7905463/Donald-Trump-front-Tower-New-York-City-August-2008.jpg" alt="Trump Fist Raised" class="bottom-image">
+    <footer>
+        <p>That's the news. New Headlines next week.</p>
+        <img src="https://cdn.britannica.com/45/193845-050-A7905463/Donald-Trump-front-Tower-New-York-City-August-2008.jpg" alt="Donald Trump Tower" class="bottom-image">
+    </footer>
 </body>
 </html>
